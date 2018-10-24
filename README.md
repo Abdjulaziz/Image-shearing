@@ -1,2 +1,5 @@
 # Image-shearing
-Shearing algorithm 
+
+Made by Abdulaziz Al Otaibi
+
+Image processing - Shearing algorithm 

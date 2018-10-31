@@ -1,3 +1,4 @@
+# Important imports for image processing
 import cv2
 import numpy as np
 
@@ -6,7 +7,7 @@ img = cv2.imread("2.PNG", 0)
 # Shearing factors in X and Y direction
 Bx = 1
 By = 1
-#imread rows and columns
+# imread rows and columns
 rows = img.shape[0]
 cols = img.shape[1]
 

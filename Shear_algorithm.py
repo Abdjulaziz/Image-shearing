@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 
 # Basic image reading
-img = cv2.imread("2.PNG", 0)
+img = cv2.imread("mig.JPG", 0)
 # Shearing factors in X and Y direction
 Bx = 1
 By = 1
@@ -27,6 +27,7 @@ def shearAlgorithm():
 
             if i >= 0 and i <= rows and j >= 0 and j <= cols:
                 CopyOf_img1[i + n, j] = k
+
 
     for i in range(0, rows):
         for j in range(0, cols):

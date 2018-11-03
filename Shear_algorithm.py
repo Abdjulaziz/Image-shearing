@@ -19,24 +19,7 @@ CopyOf_img4 = np.zeros((rows, cols + rows, 3), np.uint8)
 
 
 def shearAlgorithm():
-    # ShearY algorithm
-    for i in range(0, rows):
-        for j in range(0, cols):
-            n = By * j
-            k = img[i, j]
-
-            if i >= 0 and i <= rows and j >= 0 and j <= cols:
-                CopyOf_img1[i + n, j] = k
-
-
-    for i in range(0, rows):
-        for j in range(0, cols):
-            n = By * j
-            k = img[i, j]
-            if i >= 0 and i <= rows and j >= 0 and j <= cols:
-                CopyOf_img2[i - n + cols, j] = k
-
-    # ShearX algorithm
+    # ShearX algorithm(s)
     for i in range(0, rows):
         for j in range(0, cols):
             n = Bx * i
@@ -50,6 +33,24 @@ def shearAlgorithm():
             k = img[i, j]
             if i >= 0 and i <= rows and j >= 0 and j <= cols:
                 CopyOf_img4[i, j - n + rows] = k
+
+    # ShearY algorithm(s)
+    for i in range(0, rows):
+        for j in range(0, cols):
+            n = By * j
+            k = img[i, j]
+
+            if i >= 0 and i <= rows and j >= 0 and j <= cols:
+                CopyOf_img1[i + n, j] = k
+
+    for i in range(0, rows):
+        for j in range(0, cols):
+            n = By * j
+            k = img[i, j]
+            if i >= 0 and i <= rows and j >= 0 and j <= cols:
+                CopyOf_img2[i - n + cols, j] = k
+
+
 
     # Default image
     cv2.imshow("defult", img)
